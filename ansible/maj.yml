@@ -1,0 +1,27 @@
+- name: Mise à jour des serveurs Debian
+  hosts: linux
+  become: true
+  serial: 1
+  tasks:
+    - name: Paquets a jour
+      ansible.builtin.apt:
+        update_cache: true
+        upgrade: dist
+    - name: needrestart present
+      ansible.builtin.apt:
+        name: needrestart
+        state: present
+    - name: Nouveau noyau en attente ?
+      ansible.builtin.command: needrestart -k -k
+      register: noyau
+      changed_when: false
+      failed_when: false
+      check_mode: false
+    - name: Afficher l'etat du noyau
+      ansible.builtin.debug:
+        msg: "{{ noyau.stdout_lines | select('search', 'KSTA') | list }}"
+    - name: Redemarrer si necessaire (jamais SRV-ADM01 lui-même)
+      ansible.builtin.reboot:
+      when:
+        - "noyau.stdout is search('KSTA: [23]')"
+        - inventory_hostname != 'srv-adm01'
