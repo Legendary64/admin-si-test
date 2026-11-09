@@ -1,0 +1,33 @@
+---
+- name: Paquets de base
+  ansible.builtin.apt:
+    name: "{{ paquets_base }}"
+    state: present
+    update_cache: true
+    cache_valid_time: 3600
+
+- name: Fuseau horaire
+  community.general.timezone:
+    name: "{{ fuseau_horaire }}"
+
+- name: Compte audit
+  ansible.builtin.user:
+    name: audit
+    shell: /bin/bash
+    create_home: true
+
+- name: Clé publique de l'intervenant
+  ansible.posix.authorized_key:
+    user: audit
+    state: present
+    key: "{{ audit_ssh_key }}"
+    exclusive: true
+
+- name: Sudo sans mot de passe pour audit
+  ansible.builtin.copy:
+    dest: /etc/sudoers.d/audit
+    content: "audit ALL=(ALL) NOPASSWD:ALL\n"
+    owner: root
+    group: root
+    mode: "0440"
+    validate: "visudo -cf %s"

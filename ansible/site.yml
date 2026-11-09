@@ -1,0 +1,6 @@
+---
+- name: Configuration des serveurs Linux
+  hosts: linux
+  become: true
+  roles:
+    - commun

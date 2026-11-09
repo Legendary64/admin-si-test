@@ -1,0 +1,8 @@
+---
+audit_ssh_key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIwy8UCbLGV5QSFYLSoqWvWdnUA6lXt8qJpXWi8v1S3R audit-test"
+fuseau_horaire: Europe/Paris
+paquets_base:
+  - curl
+  - vim
+  - htop
+  - unzip
