@@ -1,5 +1,5 @@
 ---
-audit_ssh_key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIwy8UCbLGV5QSFYLSoqWvWdnUA6lXt8qJpXWi8v1S3R audit-test"
+audit_ssh_key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOw3qxuiLrUMaFtqys57HLEDw/zSgXdszLe5tXRfyjlu audit@intervenant"
 fuseau_horaire: Europe/Paris
 paquets_base:
   - curl
