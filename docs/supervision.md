@@ -6,7 +6,4 @@
 ## Tableau de bord Grafana
 - Disponibilité, processeur, mémoire, disques (capture : <img width="1860" height="951" alt="image" src="https://github.com/user-attachments/assets/ba85e987-7bb0-4797-981f-9e0b0f1ce73e" />
 )
-## Alerte testée
-- Règle : <ex. InstanceDown : up == 0 pendant 1 minute>
-- Test : <ce que tu as provoqué, à quelle heure>
-- Résultat : alerte Firing (capture : <fichier>)
+
