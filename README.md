@@ -15,6 +15,11 @@ en PowerShell, et vérifiée par un pipeline GitHub Actions (ansible-lint et
 | SRV-WEB01 | 10.10.0.20 | Debian  | nginx, sauvegarde, intranet                 |
 | SRV-ADM01 | 10.10.0.30 | Debian  | Ansible, apt-cacher-ng, Prometheus, Grafana |
 
+## Architecture
+SRV-DC01 : Active Directory, DNS, DHCP, partage Commun
+SRV-WEB01 (EWAN dans l'AD) : nginx, sauvegarde, intranet, membre du domaine
+SRV-ADM01 : Ansible, Prometheus, Grafana, apt-cacher-ng
+
 ## Contenu du dépôt
 - `ansible/` : site.yml, maj.yml, exporteurs.yml, proxy-apt.yml, inventaire, rôles commun, ssh, durcissement
 - `windows/` : scripts PowerShell rejouables
