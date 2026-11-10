@@ -16,6 +16,5 @@
 3. Vérifier le contenu et les droits : `ls -l <fichier>`
 
 ## Test de restauration réalisé
-- Fichier supprimé : <lynis-avant>,
-- Commande de restauration : <commande>
-- Résultat : <lynis-apres>
+- Fichier supprimé : lynis-avant,
+- Résultat : lynis-apres
