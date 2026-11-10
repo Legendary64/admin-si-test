@@ -1,0 +1,12 @@
+---
+- name: Configuration durcie de sshd
+  ansible.builtin.copy:
+    dest: /etc/ssh/sshd_config.d/00-durcissement.conf
+    content: |
+      PermitRootLogin no
+      MaxAuthTries 3
+    owner: root
+    group: root
+    mode: "0644"
+    validate: "sshd -t -f %s"
+  notify: Redemarrer ssh

@@ -1,0 +1,39 @@
+---
+- name: Paquets de sécurité
+  ansible.builtin.apt:
+    name:
+      - ufw
+      - fail2ban
+      - unattended-upgrades
+    state: present
+    update_cache: true
+    cache_valid_time: 3600
+
+- name: Ports autorisés dans ufw
+  community.general.ufw:
+    rule: allow
+    port: "{{ item }}"
+    proto: tcp
+  loop: "{{ ufw_ports }}"
+
+- name: Activer ufw avec refus par défaut
+  community.general.ufw:
+    state: enabled
+    policy: deny
+    direction: incoming
+
+- name: fail2ban actif au démarrage
+  ansible.builtin.service:
+    name: fail2ban
+    state: started
+    enabled: true
+
+- name: Mises à jour automatiques de sécurité
+  ansible.builtin.copy:
+    dest: /etc/apt/apt.conf.d/20auto-upgrades
+    content: |
+      APT::Periodic::Update-Package-Lists "1";
+      APT::Periodic::Unattended-Upgrade "1";
+    owner: root
+    group: root
+    mode: "0644"

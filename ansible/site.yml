@@ -4,3 +4,5 @@
   become: true
   roles:
     - commun
+    - ssh
+    - durcissement
