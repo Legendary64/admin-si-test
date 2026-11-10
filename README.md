@@ -1,6 +1,6 @@
 # Projet de synthèse : industrialiser le SI de la PME
 
-Binôme : <Ewan TREFFEL> et <Mathieu LESUEUR>
+Binôme : Ewan TREFFEL et Mathieu LESUEUR
 Dépôt : https://github.com/Legendary64/admin-si-test
 
 ## Le projet
