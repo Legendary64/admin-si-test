@@ -50,5 +50,12 @@ utilisable, mais non verrouillé, sinon sshd refuse la connexion par clé.
 ## Secrets
 Aucun secret en clair. <Si Vault : fichier chiffré, mot de passe hors dépôt.>
 
+##Écarts constatés lors de l'audit
+SRV-WEB01 absent de l'AD
+Le serveur Web a été joint au domaine sous le nom « EWAN ». Le script d'audit attend la présence d'un ordinateur nommé « SRV-WEB01 », ce qui explique l'écart signalé.
+
+GPO de mises à jour non détectée
+Une GPO dédiée aux mises à jour est configurée sous le nom « GPO_MAJ_Windows ». Le script d'audit ne semble pas prendre en compte cette dénomination et ne l'identifie donc pas comme une GPO de gestion des mises à jour.
+
 ## Sources
 <Code ou documentation repris d'ailleurs, avec le lien. Écrire "aucune" si rien.>
