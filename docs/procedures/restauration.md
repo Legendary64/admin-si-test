@@ -16,6 +16,6 @@
 3. Vérifier le contenu et les droits : `ls -l <fichier>`
 
 ## Test de restauration réalisé
-- Fichier supprimé : <nom>, le <date et heure>
+- Fichier supprimé : <lynis-avant>,
 - Commande de restauration : <commande>
-- Résultat : fichier retrouvé à l'identique (<preuve : somme sha256 ou capture>)
+- Résultat : <lynis-apres>
