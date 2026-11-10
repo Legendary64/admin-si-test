@@ -44,8 +44,8 @@ Le compte a `password: "*"` et `password_lock: false` : sans mot de passe
 utilisable, mais non verrouillé, sinon sshd refuse la connexion par clé.
 
 ## Sécurité : Lynis avant et après
-- Avant durcissement : <indice> (`docs/securite/lynis-avant.txt`)
-- Après durcissement : <indice> (`docs/securite/lynis-apres.txt`)
+- Avant durcissement : 67 (`docs/securite/lynis-avant.txt`)
+- Après durcissement : 70 (`docs/securite/lynis-apres.txt`)
 
 ## Secrets
 Aucun secret en clair. <Si Vault : fichier chiffré, mot de passe hors dépôt.>
