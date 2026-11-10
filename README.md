@@ -58,4 +58,8 @@ GPO de mises à jour non détectée
 Une GPO dédiée aux mises à jour est configurée sous le nom « GPO_MAJ_Windows ». Le script d'audit ne semble pas prendre en compte cette dénomination et ne l'identifie donc pas comme une GPO de gestion des mises à jour.
 
 ## Sources
-<Code ou documentation repris d'ailleurs, avec le lien. Écrire "aucune" si rien.>
+Documentation Ansible : https://docs.ansible.com/
+Documentation Prometheus : https://prometheus.io/docs/
+Documentation Grafana : https://grafana.com/docs/
+Documentation Debian : https://wiki.debian.org/
+Documentation Microsoft AD DS : https://learn.microsoft.com/
