@@ -1,6 +1,7 @@
 # Supervision
 ## Cibles Prometheus
-- SRV-WEB01, SRV-ADM01, SRV-DC01 : UP (capture : <img width="637" height="369" alt="image" src="https://github.com/user-attachments/assets/886963ac-9ca4-4f73-90f0-a60a5b9bb0f2" />
+- SRV-WEB01, SRV-ADM01, SRV-DC01 : UP (capture : <img width="1915" height="876" alt="image" src="https://github.com/user-attachments/assets/d9533554-53e9-4b87-b992-1d2098820e62" />
+
 
 )
 ## Tableau de bord Grafana
